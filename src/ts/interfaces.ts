@@ -3,3 +3,7 @@ export interface AudioClip {
 	url: string;
 	description: string;
 }
+
+export interface DrumProps {
+	audioClip: AudioClip;
+}

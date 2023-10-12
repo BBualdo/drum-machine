@@ -1,4 +1,5 @@
-import { AudioClip } from './ts/types';
+import Drum from './components/Drum';
+import { AudioClip } from './ts/interfaces';
 
 const audioClips: AudioClip[] = [
 	{
@@ -49,7 +50,16 @@ const audioClips: AudioClip[] = [
 ];
 
 function App() {
-	return <>Code goes here</>;
+	return (
+		<div className='container' id='drum-machine'>
+			<h1>Drum Machine</h1>
+			<div className='whole-drum'>
+				{audioClips.map((clip) => {
+					return <Drum audioClip={clip} key={clip.keyTrigger} />;
+				})}
+			</div>
+		</div>
+	);
 }
 
 export default App;
