@@ -75,7 +75,7 @@ function App() {
 					return <Drum audioClip={clip} key={clip.keyTrigger} />;
 				})}
 			</div>
-			<div id='display'></div>
+			<div id='display'>Start Playing...</div>
 		</div>
 	);
 }
